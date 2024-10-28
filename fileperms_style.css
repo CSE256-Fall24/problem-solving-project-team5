@@ -37,8 +37,8 @@
     display: none;
 }
 
-.introduction-box { 
-    padding-left: 20px; 
-    border: black; 
-    border-width: 2px; 
+#introduction-box { 
+    padding: 20px; 
+    border-color: black; 
+    border-width: 10px; 
 }
