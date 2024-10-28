@@ -36,3 +36,9 @@
 .no-close .ui-dialog-titlebar-close {
     display: none;
 }
+
+.introduction-box { 
+    padding-left: 20px; 
+    border: black; 
+    border-width: 2px; 
+}
