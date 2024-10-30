@@ -6,8 +6,11 @@ let user_select_field = define_new_user_select_field("user_select", "Select User
 $('#ep').attr('filepath','/C/presentation_documents/important_file.txt')
 $('#sidepanel').append(user_select_field)
 
-let new_dialog = define_new_dialog('new_dialog', 'Here')
-$('#sidepanel').append(new_dialog); 
+let new_dialog = define_new_dialog('new_dialog', title = 'Effective Permission Explanation')
+// $('#sidepanel').append(new_dialog); 
+console.log('clicked!')
+    new_dialog.dialog('open')
+    console.log($('#ep').attr('filepath'), $('#ep').attr('username'), $(this).attr('permission_name'))
 
 $('.perm_info').click(function(){
     console.log('clicked!')
@@ -20,7 +23,6 @@ $('.perm_info').click(function(){
 
     new_dialog.html(new_exp_text)
 })
-
 
 
 // ---- Display file structure ----
