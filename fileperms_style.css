@@ -37,12 +37,20 @@
     display: none;
 }
 
-#introduction-box { 
+.info-box { 
     padding: 20px; 
     border-style: solid;
     border-width: 2px; 
     border-color: #dddddd;
     margin: 20px; 
+}
+
+#introduction-box { 
+    width: 150px; 
+}
+
+#help-box { 
+    width: 550px; 
 }
 
 h2, h3 { 
