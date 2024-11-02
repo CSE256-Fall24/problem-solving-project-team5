@@ -77,10 +77,12 @@ h3 {
 #explanation_text{
     display: inline-block;
     font-size: 1.2em;
+    word-wrap: break-word;
 }
 
 #explanation_info{
     color: red;
+    word-wrap: break-word;
 }
 
 .new_dialog{
