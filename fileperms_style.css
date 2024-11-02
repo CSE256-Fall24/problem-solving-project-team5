@@ -66,3 +66,23 @@ h3 {
     padding: 10px;
 }
 
+#finder{
+    padding: 20px;
+}
+
+#user_select_button.ui-button ui-widget ui-corner-all{
+    color: rgb(9, 255, 0);
+}
+
+#explanation_text{
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+#explanation_info{
+    color: red;
+}
+
+.new_dialog{
+    width: 50%;
+}
