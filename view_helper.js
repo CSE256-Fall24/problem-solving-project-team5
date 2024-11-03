@@ -200,7 +200,7 @@ function define_new_effective_permissions(id_prefix, add_info_col = false, which
     // call update_effective_contents when either username or filepath changes:
     define_attribute_observer(effective_container, 'username', update_effective_contents)
     define_attribute_observer(effective_container, 'filepath', update_effective_contents)
-    
+    $('.groupcheckbox').change(update_effective_contents)
     return effective_container
 }
 
@@ -285,7 +285,7 @@ function define_grouped_permission_checkboxes(id_prefix, which_groups = null) {
     //Update permissions when checkbox is clicked:
     group_table.find('.groupcheckbox').change(function(){
         toggle_permission_group( group_table.attr('filepath'), group_table.attr('username'), $(this).attr('group'), $(this).attr('ptype'), $(this).prop('checked'))
-        update_group_checkboxes()// reload checkboxes
+        update_group_checkboxes(); // reload checkboxes
     })
 
     return group_table
@@ -499,6 +499,47 @@ function define_new_user_select_field(id_prefix, select_button_text, on_user_cha
     })
 
     return sel_section
+}
+
+function define_user_dropdown_field(
+    id_prefix,
+    on_user_change = function (selected_user) {}
+) {
+    let selection_dropdown = $(`
+        <div id="${id_prefix}">
+            <span style="margin-right: 8px;">User:</span>
+            <select id="${id_prefix}_dropdown" class="ui-widget-content">
+                <option selected disabled value="">Select one...</option>
+                ${Object.keys(all_users)
+                    .map((user) => `<option value="${user}">${user}</option>`)
+                    .join("")}
+            </select>
+        </div>
+    `).change(function () {
+        let selected_user = $(this).find('select').val();
+        $(this).attr("selected_user", selected_user);
+        on_user_change(selected_user);
+    });
+    return selection_dropdown;
+}
+
+function define_file_dropdown_field(id_prefix, on_file_change = function(selected_file) {}) {
+    let selection_dropdown = $(`
+        <div id="${id_prefix}">
+            <span style="margin-right: 8px;">File:</span>
+            <select id="${id_prefix}_dropdown" class="ui-widget-content">
+                <option selected disabled value="">Select one...</option>
+                ${Object.keys(path_to_file)
+                    .map((file) => `<option value="${file}">${file}</option>`)
+                    .join("")}
+            </select>
+        </div>
+    `).change(function () {
+        let selected_file = $(this).find('select').val();
+        $(this).attr("selected_file", selected_file);
+        on_file_change(selected_file);
+    });
+    return selection_dropdown;
 }
 
 //---- misc. ----

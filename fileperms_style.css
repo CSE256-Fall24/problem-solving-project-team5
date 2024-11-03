@@ -59,8 +59,28 @@
     width: 825px; 
 }
 
-h2, h3, h4, ul { 
+h2, h3, h4, ul, #sidepanel { 
     font-family: Arial, Helvetica, sans-serif; 
+}
+
+#ep {
+    padding: 20px;
+}
+
+#effperm_selectors {
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: space-evenly;
+}
+
+#effperm_selectors select {
+    border-radius: 10px;
+    padding: 5px;
 }
 
 ul{

@@ -2,11 +2,16 @@
 
 
 let permission_panel = define_new_effective_permissions("ep", true) 
-$('#sidepanel').append(permission_panel)
 
-let user_select_field = define_new_user_select_field("user_select", "Select User", function(selected_user){$('#ep').attr('username', selected_user)})
-$('#ep').attr('filepath','/C/presentation_documents/important_file.txt')
-$('#sidepanel').append(user_select_field)
+let user_select_field = define_user_dropdown_field("user_select", function(selected_user){$('#ep').attr('username', selected_user)})
+let file_select_field = define_file_dropdown_field("file_select", function(selected_file){$('#ep').attr('filepath', selected_file)})
+
+let selector_div = $('<div id="effperm_selectors"></div>')
+selector_div.append(user_select_field)
+selector_div.append(file_select_field)
+
+permission_panel.append(selector_div)
+$('#sidepanel').append(permission_panel)
 
 
 let new_dialog = define_new_dialog('new_dialog', title = 'Permission Information')
