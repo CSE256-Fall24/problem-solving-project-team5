@@ -8,7 +8,7 @@
 }
 
 .ui-selected { 
-    background: #007fff; 
+    background: lightgray; 
     color: white; 
 }
 
@@ -59,7 +59,7 @@
     width: 825px; 
 }
 
-h2, h3, h4, ul, #sidepanel { 
+h1, h2, h3, h4, ul, #sidepanel { 
     font-family: Arial, Helvetica, sans-serif; 
 }
 
@@ -71,11 +71,12 @@ h2, h3, h4, ul, #sidepanel {
     border-radius: 20px;
     margin-top: 20px;
     padding: 20px;
-    background-color: lightgray;
+    background-color: #007fff;
     display: flex;
     flex-direction: row;
     gap: 40px;
     justify-content: space-evenly;
+    color: white;
 }
 
 #effperm_selectors select {
@@ -151,3 +152,5 @@ h3 {
 .new_dialog{
     width: 50%;
 }
+
+
