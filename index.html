@@ -102,10 +102,11 @@
                 <div title="Permission Entry" id="permentry">
                     <div id="perm_entry_inheritance_explanation" style="display:none" class="section">This permission is
                         inherited from the parent object. Make changes here to override the inherited permissions.</div>
-                    <span id="perm_entry_name_text">Name: </span>
+                    <span>Use this panel to view and edit a user/group's current permissions.</span><br><br>
+                    <span id="perm_entry_name_text">User/Group: </span>
                     <span id="perm_entry_username" class="ui-widget-content section"
                         style="width:200px;display:inline-block;"></span>
-                    <button id="perm_entry_change_user" class="ui-button ui-widget ui-corner-all">Change...</button>
+                    <button id="perm_entry_change_user" class="ui-button ui-widget ui-corner-all">Select...</button><br><br>
                     <table id="perm_entry_table" class="ui-widget-content section">
                         <tr id="perm_entry_header">
                             <th id="perm_entry_header_p" width="99%">Permissions</th>
@@ -139,17 +140,17 @@
                                     </tr>
                                 </table>
                             </div>
-                            <button id="adv_perm_edit" class="ui-button ui-widget ui-corner-all">Edit...</button>
+                            <button id="adv_perm_edit" class="ui-button ui-widget ui-corner-all">Edit Permissions...</button>
                             <div id="adv_perm_inheritance_div">
                                 <input type="checkbox" id="adv_perm_inheritance" name="inherit">
                                 <label for="adv_perm_inheritance" id="adv_perm_inheritance_label">Include inheritable
-                                    permissions from this object's parent</label>
+                                    permissions from this file's folder</label>
                             </div>
                             <div id="adv_perm_replace_child_div">
                                 <input type="checkbox" id="adv_perm_replace_child_permissions" name="replace_child">
                                 <label for="adv_perm_replace_child_permissions"
-                                    id="adv_perm_replace_child_permissions_label">Replace all child object permissions
-                                    with inheritable permissions from this object</label>
+                                    id="adv_perm_replace_child_permissions_label">Replace all file permissions
+                                    with inheritable permissions from this folder</label>
                             </div>
                         </div>
                         <div id="adv_owner_tab">
