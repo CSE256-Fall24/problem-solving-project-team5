@@ -1,6 +1,7 @@
 // ---- Define your dialogs  and panels here ----
 
 
+
 let permission_panel = define_new_effective_permissions("ep", true) 
 
 let user_select_field = define_user_dropdown_field("user_select", function(selected_user){$('#ep').attr('username', selected_user)})
@@ -13,6 +14,8 @@ selector_div.append(file_select_field)
 permission_panel.append(selector_div)
 $('#sidepanel').append(permission_panel)
 
+let state = getStateAsDict()
+console.log(state)
 
 let new_dialog = define_new_dialog('new_dialog', title = 'Permission Information')
 // $('#sidepanel').append(new_dialog); 
@@ -22,6 +25,8 @@ let new_dialog = define_new_dialog('new_dialog', title = 'Permission Information
 
 //adding
 //adding
+
+
 
 $('.perm_info').click(function(){
     console.log('clicked!')
@@ -34,6 +39,15 @@ $('.perm_info').click(function(){
 
     new_dialog.html(new_exp_text)
 })
+
+//import {getStateAsDict} from './model.js';
+//import {setStateFromDict} from './model.js';
+
+$('.ui-icon-closethick').click(function(){
+    console.log('clicked'); 
+    setStateFromDict(permission_state); 
+  })
+
 
 
 
@@ -91,6 +105,7 @@ $('.folder').accordion({
 // -- Connect File Structure lock buttons to the permission dialog --
 
 // open permissions dialog when a permission button is clicked
+let permission_state = getStateAsDict()
 $('.permbutton').click( function( e ) {
     // Set the path and open dialog:
     let path = e.currentTarget.getAttribute('path');
@@ -102,6 +117,8 @@ $('.permbutton').click( function( e ) {
     e.stopPropagation() // don't propagate button click to element underneath it (e.g. folder accordion)
     // Emit a click for logging purposes:
     emitter.dispatchEvent(new CustomEvent('userEvent', { detail: new ClickEntry(ActionEnum.CLICK, (e.clientX + window.pageXOffset), (e.clientY + window.pageYOffset), e.target.id,new Date().getTime()) }))
+    console.log('lock clicked')
+    permission_state = getStateAsDict()
 });
 
 
