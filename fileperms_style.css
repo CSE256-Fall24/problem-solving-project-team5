@@ -154,3 +154,10 @@ h3 {
 }
 
 
+.info-box{
+    background-color: rgb(206, 249, 162);
+}
+
+.help-header,.key-header{
+    background-color: rgb(254, 161, 248);
+}
