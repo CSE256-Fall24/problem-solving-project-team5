@@ -64,11 +64,13 @@ h1, h2, h3, h4, ul, #sidepanel {
 }
 
 #ep {
-    padding: 20px;
+    margin: 20px;
+    padding-top: 20px;
+    border-radius: 5px;  
 }
 
 #effperm_selectors {
-    border-radius: 20px;
+    border-radius: 0px 0px 5px 5px;
     margin-top: 20px;
     padding: 20px;
     background-color: #007fff;
@@ -80,7 +82,7 @@ h1, h2, h3, h4, ul, #sidepanel {
 }
 
 #effperm_selectors select {
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px;
 }
 
