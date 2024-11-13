@@ -9,6 +9,13 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
     // The following are standard jquery-ui options. See https://jqueryui.com/dialog/
     height: 550,
     width: 400,
+    
+    position: {
+        my: "right top",
+        at: "right-20 top+50",
+        of: window
+    },
+
     buttons: {
         OK:{
             text: "OK",
