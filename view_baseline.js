@@ -354,10 +354,10 @@ $('#adv_perm_inheritance').change(function(){
     else {
         // has just been turned off - pop up dialog with add/remove/cancel
         $(`<div id="add_remove_cancel" title="Security">
-            Warning: if you proceed, inheritable permissions will no longer propagate to this object.<br/>
-            - Click Add to convert and add inherited parent permissions as explicit permissions on this object<br/>
-            - Click Remove to remove inherited parent permissions from this object<br/>
-            - Click Cancel if you do not want to modify inheritance settings at this time.<br/>
+            Warning: if you proceed, <strong>inheritable permissions</strong> will no longer propagate to this object.<br/><br/>
+            - Click <strong>Add</strong> to convert and add inherited parent permissions as explicit permissions on this object<br/><br/>
+            - Click <strong>Remove</strong> to remove inherited parent permissions from this object<br/><br/>
+            - Click <strong>Cancel</strong> if you do not want to modify inheritance settings at this time.<br/><br/>
         </div>`).dialog({ // TODO: don't create this dialog on the fly
             modal: true,
             width: 400,
