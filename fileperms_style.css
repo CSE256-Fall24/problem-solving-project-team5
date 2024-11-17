@@ -157,9 +157,13 @@ h3 {
 
 
 .info-box{
-    color: rgb(14, 0, 140);
+    color: black;
 }
 
 .help-header,.key-header{
- color: rgb(48, 22, 127);
+ color: black;
+}
+
+.help-body h3{
+    margin-bottom: 10px;
 }
