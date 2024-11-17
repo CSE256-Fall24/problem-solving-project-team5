@@ -51,12 +51,17 @@
 
 #introduction-box { 
     display: inline-block;
-    width: 200px; 
+    width: 20%; 
 }
 
 #help-box { 
     display: inline-block;
-    width: 825px; 
+    width: 60%; 
+}
+
+#glossary-box { 
+    display: inline-block;
+    width: 30%; 
 }
 
 h1, h2, h3, h4, ul, #sidepanel { 
@@ -133,6 +138,16 @@ h3 {
 }
 
 .help-body{
+    padding: 20px;
+}
+
+.glossary-header{
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.glossary-body{
     padding: 20px;
 }
 
