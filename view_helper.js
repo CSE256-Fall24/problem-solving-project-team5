@@ -200,9 +200,12 @@ function define_new_effective_permissions(id_prefix, add_info_col = false, which
     // call update_effective_contents when either username or filepath changes:
     define_attribute_observer(effective_container, 'username', update_effective_contents)
     define_attribute_observer(effective_container, 'filepath', update_effective_contents)
-    $('.groupcheckbox').change(update_effective_contents)
-    $('#adv_perm_inheritance').change(update_effective_contents)
-    $('#adv_perm_replace_child_permissions').change(update_effective_contents)
+    $(document).ready(function() {
+        $('.groupcheckbox').change(update_effective_contents);
+        $('#adv_perm_inheritance').change(update_effective_contents);
+        $('#adv_perm_replace_child_permissions').change(update_effective_contents);
+        $('#refresh_button').click(update_effective_contents);
+    });
     return effective_container
 }
 
