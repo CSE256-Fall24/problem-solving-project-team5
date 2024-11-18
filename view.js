@@ -26,6 +26,18 @@ let new_dialog = define_new_dialog('new_dialog', title = 'Permission Information
 //adding
 //adding
 
+let save_button = false 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const saveButton = document.getElementById("save");
+    if(saveButton){
+        saveButton.addEventListener('click', function(){;
+        state = getStateAsDict()
+        setStateFromDict(state)
+        save_button = true
+    });
+}
+});
 
 
 $('.perm_info').click(function(){
@@ -42,10 +54,19 @@ $('.perm_info').click(function(){
 
 //import {getStateAsDict} from './model.js';
 //import {setStateFromDict} from './model.js';
-
+let count = 0 
 $('.ui-icon-closethick').click(function(){
+    if(save_button){
+        count += 1
+        if(count == 3){
+            save_button = false
+            count = 0
+        }
+        return; 
+    }
     console.log('clicked'); 
     setStateFromDict(permission_state); 
+
   })
 
 

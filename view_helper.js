@@ -212,6 +212,8 @@ function define_new_effective_permissions(id_prefix, add_info_col = false, which
 }
 
 
+
+
 // define an element which will display *grouped* permissions for a given file and user, and allow for changing them by checking/unchecking the checkboxes.
 function define_grouped_permission_checkboxes(id_prefix, which_groups = null) {
     // Set up table and header:
