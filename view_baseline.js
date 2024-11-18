@@ -18,7 +18,7 @@ perm_dialog = define_new_dialog('permdialog', title='Permissions', options = {
 
     buttons: {
         OK:{
-            text: "OK",
+            text: "Save",
             id: "perm-dialog-ok-button",
             click: function() {
                 $( this ).dialog( "close" );
