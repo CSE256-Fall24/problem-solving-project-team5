@@ -71,13 +71,22 @@ h1, h2, h3, h4, ul, #sidepanel {
 #ep {
     margin: 20px;
     padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 5px;  
+}
+
+.oi-check {
+    color: #005451;
+    padding-right: 5px;
 }
 
 #effperm_selectors {
     border-radius: 0px 0px 5px 5px;
     margin-top: 20px;
     padding: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
     background-color: #007fff;
     display: flex;
     flex-direction: row;
