@@ -205,6 +205,8 @@ function define_new_effective_permissions(id_prefix, add_info_col = false, which
         $('#adv_perm_inheritance').change(update_effective_contents);
         $('#adv_perm_replace_child_permissions').change(update_effective_contents);
         $('#refresh_button').click(update_effective_contents);
+        $('.ui-icon-closethick').click(update_effective_contents);
+
     });
     return effective_container
 }
