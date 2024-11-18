@@ -326,7 +326,7 @@ $( "#advtabs" ).tabs({
 let adv_contents = $(`#advdialog`).dialog({
     position: { my: "top", at: "top", of: $('#html-loc') },
     width: 700,
-    height: 450,
+    height: 550,
     modal: true,
     autoOpen: false,
     appendTo: "#html-loc",
