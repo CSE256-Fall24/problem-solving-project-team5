@@ -65,6 +65,7 @@ $('.ui-icon-closethick').click(function(){
         return; 
     }
     console.log('clicked'); 
+    console.log('save on x click: ', permission_state)
     setStateFromDict(permission_state); 
 
   })
@@ -127,6 +128,7 @@ $('.folder').accordion({
 
 // open permissions dialog when a permission button is clicked
 let permission_state = getStateAsDict()
+console.log('initial print: ', permission_state)
 $('.permbutton').click( function( e ) {
     // Set the path and open dialog:
     let path = e.currentTarget.getAttribute('path');
@@ -140,6 +142,7 @@ $('.permbutton').click( function( e ) {
     emitter.dispatchEvent(new CustomEvent('userEvent', { detail: new ClickEntry(ActionEnum.CLICK, (e.clientX + window.pageXOffset), (e.clientY + window.pageYOffset), e.target.id,new Date().getTime()) }))
     console.log('lock clicked')
     permission_state = getStateAsDict()
+    console.log('update after clicking perm button: ', permission_state)
 });
 
 
