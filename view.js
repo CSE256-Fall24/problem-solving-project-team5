@@ -31,7 +31,7 @@ let save_button = false
 document.addEventListener('DOMContentLoaded', function() {
     const saveButton = document.getElementById("save");
     if(saveButton){
-        saveButton.addEventListener('click', function(){;
+        saveButton.addEventListener('click', function(){
         state = getStateAsDict()
         setStateFromDict(state)
         save_button = true

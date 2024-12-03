@@ -36,8 +36,8 @@ for(p of Object.values(permissions)) {
   perm_state = []
 
   // loop through all the users and files
-  for(u in all_users) {
-    for(f in path_to_file) {
+  for(var u in all_users) {
+    for(var f in path_to_file) {
 
       // set up an object to store the data in
       entry = {}
@@ -71,7 +71,7 @@ for(p of Object.values(permissions)) {
  function setStateFromDict(perm_state) {
   // this function restores the state to whatever is in perm_state
   // for all the pairs of users and files
-  for (pairIndex in perm_state) {
+  for (var pairIndex in perm_state) {
     file_user_pair = perm_state[pairIndex]
 
     // create the total list of permissions that could possibly be set
