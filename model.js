@@ -50,7 +50,16 @@ for(p of Object.values(permissions)) {
       
       // go through all the file permissions set - if ace is a permission on the current user, then store it
       for(let ace of file.acl) {
+        console.log('THIS IS A FILE', ace)
         if (( typeof (ace.who) === 'string') && (u ===  ace.who)) {
+          console.log('This is an individual user: ', ace.who)
+          perm = {}
+          perm['permission'] = ace.permission
+          perm['is_allow_ace'] = ace.is_allow_ace
+
+          perms.push(perm)
+        } else if ((typeof (ace.who.name) === 'string') && (u === ace.who.name)) {
+          console.log('This is a group: ', ace.who.name)
           perm = {}
           perm['permission'] = ace.permission
           perm['is_allow_ace'] = ace.is_allow_ace
