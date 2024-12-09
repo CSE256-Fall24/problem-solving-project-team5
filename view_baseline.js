@@ -362,7 +362,7 @@ $('#adv_perm_inheritance').change(function(){
         // has just been turned off - pop up dialog with add/remove/cancel
         $(`<div id="add_remove_cancel" title="Security">
             Warning: if you proceed, <strong>inheritable permissions</strong> will no longer apply to this file.<br/><br/>
-            - Click <strong>Add</strong> to add allow inherited permissions to be edited directly.<br/><br/>
+            - Click <strong>Add</strong> to allow inherited permissions to be edited directly.<br/><br/>
             - Click <strong>Remove</strong> to remove <strong>all inherited permissions</strong> from this file.<br/><br/>
             - Click <strong>Cancel</strong> if you do not want to modify inheritance settings at this time.<br/><br/>
         </div>`).dialog({ // TODO: don't create this dialog on the fly
